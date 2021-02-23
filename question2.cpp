@@ -25,9 +25,10 @@ std::pair<int, int> findTwoSum(const std::vector<int>& list, int sum)
         result = std :: make_pair(-1,-1);
     }
 
-    //throw std::logic_error("Waiting to be implemented");
+    //throw std::logic_error("Waiting to be implemented  ");
     return result;
 }
+
 
 #ifndef RunTests
 int main()

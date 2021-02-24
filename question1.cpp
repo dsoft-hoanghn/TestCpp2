@@ -57,6 +57,6 @@ int main()
     Node n3(3, NULL, NULL);
     Node n2(2, &n1, &n3);
 
-    std::cout << "this is result: " << BinarySearchTree::contains(&n2, 9);
+    std::cout << "this is result: " << BinarySearchTree::contains(&n2, 3);
 }
 #endif

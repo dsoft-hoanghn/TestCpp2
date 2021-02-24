@@ -28,6 +28,6 @@ g++ question2.cpp -o question2.exe
 ## Expected result
 - Question 2
 when the input findTwoSum({3, 1, 5, 7, 5, 9},10)
-So The output to the screen is: 0 3
+So The output to the screen is: 1 (true)
 
 

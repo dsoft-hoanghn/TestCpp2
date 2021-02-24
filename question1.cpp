@@ -36,25 +36,18 @@ private:
 class BinarySearchTree
 {
     public:
-        static bool contains(const Node *root, int value)
+        static bool contains(const Node *root, int Value)
         {
-            if(value == root->getValue()&& root != NULL) return true;
-            else
+            if (root->getValue() == Value) return true;
+            else if (root->getValue() < Value && root->getRight() != NULL)
             {
-                if(value > root->getValue()&& root != NULL) return contains(root->getRight(),value);
-                else
-                {
-                    if (value < root->getValue()&& root !=NULL) return contains(root->getLeft(),value);
-                    else
-                    {
-                        return false;
-                    }
-                }   
+                return contains(root->getRight(), Value);
             }
-            
+            else if (root->getLeft() != NULL)
+                return contains(root->getLeft(), Value);
+            return false;
             throw std::logic_error("Waiting to be implemented");
         }
-       
 };
 
 #ifndef RunTests
@@ -64,6 +57,6 @@ int main()
     Node n3(3, NULL, NULL);
     Node n2(2, &n1, &n3);
 
-    std::cout << "this is result: " << BinarySearchTree::contains(&n2, 3);
+    std::cout << "this is result: " << BinarySearchTree::contains(&n2, 9);
 }
 #endif
